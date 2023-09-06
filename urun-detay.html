@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>947 Menu</title>
-    <link rel="stylesheet" href="urun-detay.css">
+    <link rel="stylesheet" href="styles/urun-detay.css">
 </head>
 <body>
     <section class="d-flex-center">
@@ -16,11 +16,11 @@
             </div>
             <div class="img-and-text">
                 <div class="urun-img">
-                    <img src="img/tea-1284366_1280.jpg" alt="urun detay fotoğraf">
+                    <img alt="urun detay fotoğraf">
                 </div>
                 <div class="urun-isim">
                     <div class="urun-title">
-                        <h2>BARDAK ÇAY</h2>
+                        <h2></h2>
                     </div>
                     <div class="urun-aciklama">
                         <span></span>
@@ -29,11 +29,24 @@
             </div>
             <div class="urun-fiyat-card">
                 <div class="urun-fiyat">
-                    &#x20BA;
-                    <span>28.00</span>
+                    <span></span>
                 </div>
             </div>
         </div>
     </section>
+<script>
+    const selectedProduct = JSON.parse(localStorage.getItem("selectedProduct"));
+
+    const urunImg = document.querySelector(".urun-img");
+    const urunTitle = document.querySelector(".urun-title");
+    const urunAciklama = document.querySelector(".urun-aciklama");
+    const urunFiyat = document.querySelector(".urun-fiyat span");
+
+    urunImg.innerHTML = `<img src="${selectedProduct.img}" alt="${selectedProduct.alt}">`;
+    urunTitle.innerHTML = `<h2>${selectedProduct.product}</h2>`;
+    urunAciklama.innerHTML = `<span>${selectedProduct.desc}</span>`;
+    urunFiyat.innerHTML = `${selectedProduct.price}`;
+
+</script>
 </body>
 </html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <!-- CSS LİNK -->
+    <link rel="stylesheet" href="../styles/menu.css">
+
+    <!-- JS LİNK -->
+    <link rel="stylesheet" href="../script/menu.js">
+    <!-- FONT-LİNK -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&family=Nunito:wght@200;300;400;500;600&family=Poppins:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body> 
+    <div class="home-page">
+        <section class="home-top ">
+            <div class="logo-img">
+                <img src="../img/replicate-prediction-4n66vsjbdqm73hqjy35kuanoe4%20(1).png" alt="">
+                <!-- <h2>947 CONCEPT COFFEE</h2> -->
+            </div>
+        </section>
+        <section class="home-top-responsive">
+            <div class="logo-img">
+                <img src="../img/replicate-prediction-4n66vsjbdqm73hqjy35kuanoe4%20(1).png" alt="">
+                <!-- <h2>947 CONCEPT COFFEE</h2> -->
+            </div>
+        </section>
+
+        <section class="menu-list  display-column">
+
+            <a href="../urun.html" class="list" id="list-1">
+                <div class="list-text">
+                    <h1>SICAK İÇECEKLER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-2">
+                <div class="list-text">
+                    <h1>ESPRESSO BAZLI KAHVELER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-3">
+                <div class="list-text">
+                    <h1>947 KOKTEYL</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-4">
+                <div class="list-text">
+                    <h1>3. NESİL DEMLEMELER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-5">
+                <div class="list-text">
+                    <h1>SOĞUK KAHVELER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-6">
+                <div class="list-text">
+                    <h1>SOĞUK İÇECEKLER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-3">
+                <div class="list-text">
+                    <h1>947 KOKTEYL</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-3">
+                <div class="list-text">
+                    <h1>947 KOKTEYL</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-3">
+                <div class="list-text">
+                    <h1>947 KOKTEYL</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-4">
+                <div class="list-text">
+                    <h1>3. NESİL DEMLEMELER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-5">
+                <div class="list-text">
+                    <h1>SOĞUK KAHVELER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-6">
+                <div class="list-text">
+                    <h1>SOĞUK İÇECEKLER</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-7">
+                <div class="list-text">
+                    <h1>MİLKSHAKE</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-8">
+                <div class="list-text">
+                    <h1>FROZEN</h1>
+                </div>
+            </a>
+            <a href="#" class="list" id="list-9">
+                <div class="list-text">
+                    <h1>MAKARNALAR</h1>
+                </div>
+            </a>
+        </section>
+    </div>
+
+    <script>
+        const lists = document.querySelectorAll('.list');
+        window.addEventListener('scroll', checkLists);
+        checkLists();
+
+        function checkLists() {
+            const triggerBottom = window.innerHeight / 5 * 5;
+            lists.forEach((list, idx) => {
+                const listTop = list.getBoundingClientRect().top;
+
+                if (listTop < triggerBottom) {
+                    list.classList.add('show');
+                } else {
+                    list.classList.remove('show');
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
